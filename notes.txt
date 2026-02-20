@@ -1,0 +1,6 @@
+it init - create a .it folder, create subdirectories and HEAD file - namay
+it add - Write-Tree Command - luja
+it commit - Commit-Tree Command - ethan
+it branch - create a new file for each branch, point it to a hash - aditya
+it switch - switch the current branch file - adam
+it log - show all hashes in current branch - prasang
