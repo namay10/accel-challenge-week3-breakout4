@@ -2,6 +2,7 @@ use clap::{Parser, Subcommand};
 mod commands;
 mod error;
 mod index;
+mod error;
 
 #[derive(Parser)]
 pub struct Cli {

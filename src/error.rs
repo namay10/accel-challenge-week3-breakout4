@@ -1,5 +1,6 @@
 use std::fmt;
 use std::io;
+use std::path::PathBuf;
 
 #[derive(Debug)]
 pub enum ItError {
@@ -10,7 +11,6 @@ pub enum ItError {
     InvalidRef(String),
 
     BranchNotFound(String),
-    NothingToCommit,
 
     Io(io::Error),
 }
@@ -31,9 +31,6 @@ impl fmt::Display for ItError {
             }
             ItError::BranchNotFound(name) => {
                 write!(f, "fatal: branch '{name}' does not exist")
-            }
-            ItError::NothingToCommit => {
-                write!(f, "NothingToCommit")
             }
             ItError::Io(e) => write!(f, "fatal: {e}"),
         }
